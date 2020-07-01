@@ -10,6 +10,7 @@ import org.apache.log4j.BasicConfigurator;
 
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -50,7 +51,7 @@ public class DriverTest {
 
     @Test
     public void startServing(){
-        String[] serveRequests = {"hot_tea","hot_coffee","black_tea","green_tea","green_tea","hot_tea"};
+        String[] serveRequests = {"hot_tea","hot_coffee","black_tea","green_tea"};
 
         driver.serve(serveRequests);
 
@@ -62,6 +63,7 @@ public class DriverTest {
     }
 
     @Test
+    @Ignore
     public void bulkOrder(){
         String[] serveRequests = {"hot_tea","hot_coffee","black_tea","green_tea","green_tea","hot_tea"};
         Map<String,Double> addLotOfIngridient = new HashMap<>();
@@ -77,10 +79,7 @@ public class DriverTest {
     }
 
 
-    @Test
-    public void bulkTesting(){
 
-    }
 
 
 }
